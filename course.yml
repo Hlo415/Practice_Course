@@ -8,6 +8,4 @@ time_needed      : 1 hour
 
 
 
-install.packages("devtools")
-install.packages("dplyr")
-install.packages("rmarkdown")
+
