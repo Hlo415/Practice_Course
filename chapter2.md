@@ -38,8 +38,20 @@ msg_bad <- "That is not correct!"
 msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
 test_mc(correct = 1, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 
+
 *** =sct
 ```{r}
+
+test_mc(correct = 1, 
+        feedback_msgs = c("Incorrect. Robert did conceive R.",
+                          "Correct! R wasn't developed by a clown.",
+                          "Incorrect. Ross is one of the originators."))
+
+
+
+
+
+
 
 ```
 
