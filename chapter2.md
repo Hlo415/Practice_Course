@@ -36,7 +36,7 @@ ggplot(data =film, aes(film$Subject)) + geom_bar() + ggtitle("Movies by Subjects
 
 msg_bad <- "That is not correct!"
 msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+test_mc(correct = 1, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 
 *** =sct
 ```{r}
