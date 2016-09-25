@@ -21,8 +21,7 @@ Have a look at the plot that showed up in the viewer to the right. Which type of
 # The pre exercise code runs code to initialize the user's workspace.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 
-load(url("https://s3.amazonaws.com/data415/film.csv"))
-film <- read.csv("https://s3.amazonaws.com/data415/film.csv", header = TRUE, sep = ";")
+film <- read.csv("http://s3.amazonaws.com/data415/film.csv", header = TRUE, sep = ";")
 
 
 #load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/all_wars_matrix.RData"))
