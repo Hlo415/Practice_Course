@@ -1,6 +1,6 @@
 ---
 title       : Chapter 2 
-description : Data Visualization Basics
+description : Film
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
@@ -10,24 +10,22 @@ attachments :
 Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
 
 *** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
+
 
 *** =hint
-Have a look at the plot. Which color does the point with the lowest rating have?
+
+
 
 *** =pre_exercise_code
 ```{r}
 # The pre exercise code runs code to initialize the user's workspace.
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 
-movies <- read.csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+film <- read.csv("https://s3.amazonaws.com/data415/film.csv", header = TRUE, sep = ";")
 
 library(ggplot2)
 
-ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
+ggplot(data =film, aes(film$Subject)) + geom_bar() + ggtitle("Movies by Subjects") + xlab("Subjects ")
 ```
 
 *** =sct
