@@ -22,19 +22,14 @@ Have a look at the plot that showed up in the viewer to the right. Which type of
 # You can use it to load packages, initialize datasets and draw a plot in the viewer
 
 film <- read.csv("https://s3.amazonaws.com/data415/film.csv", header = TRUE, sep = ";")
-
 library(ggplot2)
-
 ggplot(data =film, aes(film$Subject)) + geom_bar() + ggtitle("Movies by Subjects") + xlab("Subjects ")
+
 ```
 
 *** =sct
 ```{r}
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:b2a65d2d17
