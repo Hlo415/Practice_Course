@@ -32,15 +32,8 @@ library(ggplot2)
 ggplot(data =film, aes(film$Subject)) + geom_bar() + ggtitle("Movies by Subjects") + xlab("Subjects ")
 
 ```
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 1, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
-
-
 *** =sct
-```{r}
+```{r, eval=FALSE}
 
 test_mc(correct = 1, 
         feedback_msgs = c("Incorrect. Robert did conceive R.",
@@ -48,12 +41,15 @@ test_mc(correct = 1,
                           "Incorrect. Ross is one of the originators."))
 
 
-
-
-
-
-
 ```
+
+
+# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
+
+msg_bad <- "That is not correct!"
+msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
+test_mc(correct = 1, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:b2a65d2d17
 ## More movies
