@@ -36,20 +36,13 @@ ggplot(data =film, aes(film$Subject)) + geom_bar() + ggtitle("Movies by Subjects
 ```{r, eval=FALSE}
 
 test_mc(correct = 1, 
-        feedback_msgs = c("Incorrect. Robert did conceive R.",
-                          "Correct! R wasn't developed by a clown.",
-                          "Incorrect. Ross is one of the originators."))
+        feedback_msgs = c("Correct.",
+                          "Incorrect.",
+                          "Incorrect",
+                          "Incorrect"))
 
 
 ```
-
-
-# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
-
-msg_bad <- "That is not correct!"
-msg_success <- "Exactly! There seems to be a very bad action movie in the dataset."
-test_mc(correct = 1, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
-
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:b2a65d2d17
 ## More movies
