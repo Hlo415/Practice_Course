@@ -1,16 +1,19 @@
 ---
 title       : Chapter 2 
-description : Film
+description : Film Data
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:fee7a4f081
 ## A really bad movie
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
+Have a look at the plot that showed up in the viewer to the right. Which type of movie has the  most counts?
 
 *** =instructions
-
+- Drama
+- Action
+- Western
+- War
 
 *** =hint
 
