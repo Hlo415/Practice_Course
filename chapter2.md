@@ -110,7 +110,7 @@ test_function("str", args = "object",
               not_called_msg = "You didn't call `str()`!",
               incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
               
-test_function("ggplot", args = "data", aes = "Film_drama$Length", not_called_msg = "You didn't call ggplot ")
+test_function("ggplot", args = "data", args = "Film_drama$Length", not_called_msg = "You didn't call ggplot ")
 success_msg("Good work!")
 test_error()
 
