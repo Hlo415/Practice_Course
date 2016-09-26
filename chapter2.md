@@ -45,14 +45,15 @@ test_mc(correct = 1,
 ```
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:b2a65d2d17
-## More movies
+## Digging Deeper into the Drama category
 
-In the previous exercise, you saw a dataset about movies. In this exercise, we'll have a look at yet another dataset about movies!
+In the previous exercise, you saw a histogram graphed for counts of Films. 
+In this exercise, we'll have a look at the Drama category !
 
-A dataset with a selection of movies, `movie_selection`, is available in the workspace.
+A dataset with a selection of movies, `film`, is available in the workspace.
 
 *** =instructions
-- Check out the structure of `movie_selection`.
+- Check out the structure of `film'. 
 - Select movies with a rating of 5 or higher. Assign the result to `good_movies`.
 - Use `plot()` to  plot `good_movies$Run` on the x-axis, `good_movies$Rating` on the y-axis and set `col` to `good_movies$Genre`.
 
@@ -75,6 +76,7 @@ rm(Movies)
 
 *** =sample_code
 ```{r}
+library(dplyr)
 # movie_selection is available in your workspace
 
 # Check out the structure of movie_selection
