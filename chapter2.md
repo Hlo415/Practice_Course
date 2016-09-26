@@ -65,10 +65,10 @@ A dataset with a selection of movies, `film`, is available in the workspace.
 *** =pre_exercise_code
 ```{r}
 # You can also prepare your dataset in a specific way in the pre exercise code
-
+film <- read.csv("http://s3.amazonaws.com/data415/film.csv", header = TRUE, sep = ";")
 library(dplyr)
 library(ggplot2)
-data(Films)
+data(film)
 #movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
 
 # Clean up the environment
