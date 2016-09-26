@@ -76,6 +76,7 @@ rm(Movies)
 
 *** =sample_code
 ```{r}
+film <- read.csv("http://s3.amazonaws.com/data415/film.csv", header = TRUE, sep = ";")
 library(dplyr)
 library(ggplot)
 
@@ -96,7 +97,8 @@ library(ggplot)
 
 *** =solution
 ```{r}
-
+library(dplyr)
+library(ggplot)
 
 # Flm dataset is available in your workspace
 
