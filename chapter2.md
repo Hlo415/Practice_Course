@@ -83,19 +83,35 @@ library(dplyr)
 # Clean the data and get rid of NAs and Calculate mean and standard deviation for length 
 
 
+# Check out the structure of movie_selection
+
+
+# Select movies that have a rating of 5 or higher: good_movies
+
+
+# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
+
 ```
 
 *** =solution
 ```{r}
-library(dplyr)
+
 
 # Flm dataset is available in your workspace
+
+
 # Clean the data and get rid of NAs and Calculate mean and standard deviation for length 
 
-Film_drama %>%
-  filter(!is.na(Length))%>%
-  summarise(meanfd = mean(Length), sd_fd = sd(Length))
 
+
+# Check out the structure of movie_selection
+str(movie_selection)
+
+# Select movies that have a rating of 5 or higher: good_movies
+good_movies <- movie_selection[movie_selection$Rating >= 5, ]
+
+# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
+plot(good_movies$Run, good_movies$Rating, col = good_movies$Genre)
 ```
 
 *** =sct
