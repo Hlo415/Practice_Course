@@ -96,14 +96,6 @@ Film_drama %>%
   filter(!is.na(Length))%>%
   summarise(meanfd = mean(Length), sd_fd = sd(Length))
 
-# Check out the structure of movie_selection
-#tr(Film_drama)
-
-#elect movies that have a rating of 5 or higher: good_movies
-#ood_movies <- movie_selection[movie_selection$Rating >= 5, ]
-
-# Plot Run (i.e. run time) on the x axis, Rating on the y axis, and set the color using Genre
-#lot(good_movies$Run, good_movies$Rating, col = good_movies$Genre)
 ```
 
 *** =sct
