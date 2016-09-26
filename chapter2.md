@@ -77,6 +77,7 @@ rm(Movies)
 *** =sample_code
 ```{r}
 library(dplyr)
+library(ggplot)
 
 # Flm dataset is available in your workspace
 
