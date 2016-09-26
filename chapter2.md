@@ -69,6 +69,7 @@ film <- read.csv("http://s3.amazonaws.com/data415/film.csv", header = TRUE, sep 
 library(dplyr)
 library(ggplot2)
 data(film)
+
 #movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
 
 # Clean up the environment
@@ -81,7 +82,9 @@ Film_drama<- film %>%
 
 # Flm dataset is available in your workspace
 
-# Check out the structure of movie_selection
+# Check out the structure of film drama
+
+# Plot film drama in a histogram 
 
 
 ```
@@ -94,7 +97,8 @@ Film_drama<- film %>%
 # Check out the structure of film drama
 str(Film_drama)
 
-
+# Plot film drama in a histogram 
+ggplot(data = Film_drama , aes(Film_drama$Length))+geom_bar()
 
 ```
 
@@ -105,7 +109,10 @@ str(Film_drama)
 test_function("str", args = "object",
               not_called_msg = "You didn't call `str()`!",
               incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
+              
+test_function("ggplot", args = "data", not_called msg = "You didn't call ggplot ")
+success_msg("Good work!")
 test_error()
 
-success_msg("Good work!")
+
 ```
