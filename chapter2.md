@@ -101,7 +101,9 @@ library(dplyr)
 
 
 # Clean the data and get rid of NAs and Calculate mean and standard deviation for length 
-
+Film_drama %>%
+  filter(!is.na(Length))%>%
+  summarise(meanfd = mean(Length), sd_fd = sd(Length))
 
 
 # Check out the structure of movie_selection
