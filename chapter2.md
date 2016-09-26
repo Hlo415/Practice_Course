@@ -100,10 +100,10 @@ library(dplyr)
 # Flm dataset is available in your workspace
 
 
-# Clean the data and get rid of NAs and Calculate mean and standard deviation for length 
-Film_drama %>%
-  filter(!is.na(Length))%>%
-  summarise(meanfd = mean(Length), sd_fd = sd(Length))
+# Segment by drama then graph it in a bar chart 
+Film_drama<- film %>%
+  filter(Subject == "Drama")
+  ggplot(data = Film_drama , aes(Film_drama$Length))+geom_bar()
 
 
 # Check out the structure of movie_selection
