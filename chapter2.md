@@ -109,10 +109,12 @@ ggplot(data = Film_drama , aes(Film_drama$Length))+geom_bar()
 test_function("str", args = "object",
               not_called_msg = "You didn't call `str()`!",
               incorrect_msg = "You didn't call `str(object = ...)` with the correct argument, `object`.")
-              
-test_function("ggplot", args = "Film_drama", not_called_msg = "You didn't call ggplot ")
-success_msg("Good work!")
+
+
+test_student_typed("ggplot(data = Film_drama , aes(Film_drama$Length))+geom_bar()", not_typed_msg = "You didn't call ggplot.")
 test_error()
+success_msg("Good work!")
+
 
 
 ```
