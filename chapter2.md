@@ -77,7 +77,11 @@ rm(Movies)
 *** =sample_code
 ```{r}
 library(dplyr)
-# movie_selection is available in your workspace
+
+# Flm dataset is available in your workspace
+
+# Clean the data and get rid of NAs and Calculate mean and standard deviation for length 
+
 
 # Check out the structure of movie_selection
 
@@ -91,10 +95,17 @@ library(dplyr)
 
 *** =solution
 ```{r}
-# movie_selection is available in your workspace
+library(dplyr)
+
+# Flm dataset is available in your workspace
+# Clean the data and get rid of NAs and Calculate mean and standard deviation for length 
+
+Film_drama %>%
+  filter(!is.na(Length))%>%
+  summarise(meanfd = mean(Length), sd_fd = sd(Length))
 
 # Check out the structure of movie_selection
-str(movie_selection)
+str(Film_drama)
 
 # Select movies that have a rating of 5 or higher: good_movies
 good_movies <- movie_selection[movie_selection$Rating >= 5, ]
