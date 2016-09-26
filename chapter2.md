@@ -66,26 +66,25 @@ A dataset with a selection of movies, `film`, is available in the workspace.
 ```{r}
 # You can also prepare your dataset in a specific way in the pre exercise code
 
-library(MindOnStats)
-data(Movies)
-movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
+library(dplyr)
+library(ggplot2)
+data(Films)
+#movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
 
 # Clean up the environment
-rm(Movies)
+Film_drama<- film %>%
+  filter(Subject == "Drama")
 ```
 
 *** =sample_code
 ```{r}
-film <- read.csv("http://s3.amazonaws.com/data415/film.csv", header = TRUE, sep = ";")
-library(dplyr)
-library(ggplot)
 
 # Flm dataset is available in your workspace
 
-# Clean the data and get rid of NAs and Calculate mean and standard deviation for length 
-
-
 # Check out the structure of movie_selection
+
+
+# Segment by drama then graph it in a bar chart 
 
 
 # Select movies that have a rating of 5 or higher: good_movies
@@ -97,20 +96,14 @@ library(ggplot)
 
 *** =solution
 ```{r}
-library(dplyr)
-library(ggplot)
 
 # Flm dataset is available in your workspace
 
+# Check out the structure of film drama
+str(Film_drama)
 
 # Segment by drama then graph it in a bar chart 
-Film_drama<- film %>%
-  filter(Subject == "Drama")
-  ggplot(data = Film_drama , aes(Film_drama$Length))+geom_bar()
-
-
-# Check out the structure of movie_selection
-str(movie_selection)
+ggplot(data = Film_drama , aes(Film_drama$Length))+geom_bar()
 
 # Select movies that have a rating of 5 or higher: good_movies
 good_movies <- movie_selection[movie_selection$Rating >= 5, ]
