@@ -96,11 +96,11 @@ median(Film_clean$Length)
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-test_student_typed("mean(Film_clean$Length)", not_typed_msg = "You didn't call ggplot.")
-test_student_typed("sd(Film_clean$Length)", not_typed_msg = "You didn't call ggplot.")
-test_student_typed("min(Film_clean$Length)", not_typed_msg = "You didn't call ggplot.")
-test_student_typed("max(Film_clean$Length)", not_typed_msg = "You didn't call ggplot.")
-test_student_typed("median(Film_clean$Length)", not_typed_msg = "You didn't call ggplot.")
+test_student_typed("mean(Film_clean$Length)", not_typed_msg = "Incorrect, Try again.")
+test_student_typed("sd(Film_clean$Length)", not_typed_msg = "Incorrect, Try again.")
+test_student_typed("min(Film_clean$Length)", not_typed_msg = "Incorrect, Try again.")
+test_student_typed("max(Film_clean$Length)", not_typed_msg = "Incorrect, Try again.")
+test_student_typed("median(Film_clean$Length)", not_typed_msg = "Incorrect, Try again.")
 
 test_error()
 success_msg("Good work!")
