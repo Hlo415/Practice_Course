@@ -43,8 +43,9 @@ data(film)
 #movie_selection <- Movies[Movies$Genre %in% c("action", "animated", "comedy"),c("Genre", "Rating", "Run")]
 
 # Clean up the environment
-Film_drama<- film %>%
-  filter(Subject == "Drama")
+Film_clean<- film %>%
+  group_by(Length)%>%
+  filter(!is.na(Length))
 ```
 
 *** =sample_code
@@ -75,19 +76,19 @@ Film_drama<- film %>%
 # Flm dataset is available in your workspace
 
 # Calculate the Mean 
-mean(Film_drama$Length)
+mean(Film_clean$Length)
 
 # Calculate the Standard Deviation
-sd(Film_drama$Length)
+sd(Film_clean$Length)
 
 # Calculate the Minimum value
-min(Film_drama$Length)
+min(Film_clean$Length)
 
 # Calculate the Maximum value
-max(Film_drama$Length)
+max(Film_clean$Length)
 
 # Calculate the Median 
-median(Film_drama$Length)
+median(Film_clean$Length)
 
 ```
 
