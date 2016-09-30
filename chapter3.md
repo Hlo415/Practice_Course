@@ -96,26 +96,6 @@ median(Film_clean$Length)
 ```{r}
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
-test_function("mean", args = "object",
-              not_called_msg = "You didn't call `mean()`!",
-              incorrect_msg = "You didn't call `mean(object = ...)` with the correct argument, `object`.")
-
-test_function("sd", args = "object",
-              not_called_msg = "You didn't call `sd()`!",
-              incorrect_msg = "You didn't call `sd(object = ...)` with the correct argument, `object`.")
-
-test_function("min", args = "object",
-              not_called_msg = "You didn't call `min()`!",
-              incorrect_msg = "You didn't call `min(object = ...)` with the correct argument, `object`.")
-
-
-test_function("max", args = "object",
-              not_called_msg = "You didn't call `max()`!",
-              incorrect_msg = "You didn't call `max(object = ...)` with the correct argument, `object`.")
-
-test_function("median", args = "object",
-              not_called_msg = "You didn't call `median()`!",
-              incorrect_msg = "You didn't call `median(object = ...)` with the correct argument, `object`.")
 
 
 test_error()
