@@ -75,19 +75,19 @@ Film_drama<- film %>%
 # Flm dataset is available in your workspace
 
 # Calculate the Mean 
-mean(Film_drama)
+mean(Film_drama$Length)
 
 # Calculate the Standard Deviation
-sd(Film_drama)
+sd(Film_drama$Length)
 
 # Calculate the Minimum value
-min(Film_drama)
+min(Film_drama$Length)
 
 # Calculate the Maximum value
-max(Film_drama)
+max(Film_drama$Length)
 
 # Calculate the Median 
-median(Film_drama)
+median(Film_drama$Length)
 
 ```
 
